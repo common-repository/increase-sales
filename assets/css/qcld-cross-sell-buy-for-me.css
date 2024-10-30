@@ -1,0 +1,355 @@
+/*///////////////////////////////
+////// TABLE OF CONTENTS ////////
+/////////////////////////////////
+
+1. Layout / #qcld_cross_sell_layout
+
+2. Preview / #qcld_cross_sell_preview
+
+3. Responsive / #qcld_cross_sell_responsive
+
+/////////////////////////////////
+/////////////////////////////////
+///////////////////////////////*/
+
+/*//////////////////////////////////////////////////
+////////// 1. Layout / #qcld_cross_sell_layout STARTS //////////
+//////////////////////////////////////////////////*/
+
+.qcld_cross_sell-clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#qcld_cross_sell-buy-for-me {
+	position: absolute;
+    visibility: hidden;
+    top: -2000px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	text-align: center;
+	opacity: 0;
+	z-index: 999999;
+	padding: 0px 10px 10px 10px;
+}
+
+#qcld_cross_sell-buy-for-me.open {
+    visibility: visible;
+    opacity: 1;
+	top: 0;
+}
+
+.qcld_cross_sell-qcld_cross_sell-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#qcld_cross_sell-buy-for-me:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 0;
+}
+
+.qcld_cross_sell-qcld_cross_sell-wrapper {
+    display: inline-block;
+   /* vertical-align: top;*/
+    min-width: 280px;
+    max-width: 910px;
+	width: 100%;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: left;
+	margin-bottom: 10px;
+}
+
+#qcld_cross_sell-buy-for-me.open .qcld_cross_sell-qcld_cross_sell-wrapper {
+    visibility: visible;
+}
+
+.qcld_cross_sell-qcld_cross_sell-main {
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.qcld_cross_sell-qcld_cross_sell-main:after,
+.qcld_cross_sell-qcld_cross_sell-main:before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#qcld_cross_sell-buy-for-me.open .qcld_cross_sell-qcld_cross_sell-main {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.qcld_cross_sell-close {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	margin-right: 10px;
+	margin-top: -10px;
+	z-index: 999;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.qcld_cross_sell-close:hover {
+	opacity: 0.7;
+}
+
+.qcld_cross_sell-container {
+	padding: 20px 20px 0 20px;
+	background-color: #dcdcde;
+	border-radius: 15px;
+	
+}
+
+.qcld_cross_sell-message {
+	padding: 60px;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+	background-color: #edeae3;
+	border-radius: 15px;
+}
+
+.qcld_cross_sell-preview {
+	position: relative;
+	float: left;
+	max-width: 100%;
+	min-width: 260px;
+	width: 100%;
+	margin-right: 0px;
+	margin-bottom: 20px;
+}
+
+.qcld_cross_sell-form {
+	position: relative;
+	min-width: 260px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.qcld_cross_sell-col-1 {
+	float: left;
+	width: 100%;
+	max-width: 245px;
+	margin-right: 20px;
+}
+
+.qcld_cross_sell-col-2 {
+	display: inline-block;
+	width: 100%;
+	max-width: 245px;
+}
+
+#qcld_cross_sell-buy-for-me label {
+	font-size: 13px;
+	clear: both;
+}
+
+label[for="qcld_cross_sell-hide-price"] {
+	font-weight: 700;
+	line-height: 30px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#qcld_cross_sell-buy-for-me h2 {
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.qcld_cross_sell-input {
+	height: 50px !important;
+	font-size: 13px;
+	width: 100%;
+	max-width: 245px;
+	padding-left: 10px;
+	margin: 5px 0 15px 0;
+	display: block;
+}
+
+.qcld_cross_sell-select {
+	margin: 5px 0 15px 0;
+	width: 100%;
+	height: 50px !important;
+	font-size: 13px;
+	font-weight: bold;
+	padding-left: 10px;
+	display: block;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+#qcld_cross_sell-hide-price {
+	margin-bottom: 10px;
+	width: auto;
+	height: 30px;
+	margin-top: 0;
+}
+
+#qcld_cross_sell-your-message,
+#qcld_cross_sell-email-subject {
+	max-width: 100% !important;
+}
+
+#qcld_cross_sell_button_repeat,
+#qcld_cross_sell_return {
+	display: none !important;
+}
+
+.qcld_cross_sell-button-container {
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+
+.qcld_cross_sell-fa {
+	font-size: 18px !important;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#qcld_cross_sell-submit {
+	width: 100%;
+	text-align: center;
+}
+
+/*////////// #qcld_cross_sell_layout ENDS //////////*/
+
+/*////////////////////////////////////////////////////
+////////// 2. Preview / #qcld_cross_sell_preview STARTS //////////
+////////////////////////////////////////////////////*/
+
+#qcld_cross_sell-bg-front {
+	width: 100%; padding: 20px 0 20px 0; text-align: center;
+}
+
+#qcld_cross_sell-fg-front {
+	width: 100%; max-width: 300px; font-family: Arial, Helvetica, sans-serif; display: inline-block;
+}
+
+#qcld_cross_sell-your-message-front {
+	text-align: center; font-size: 16px; font-weight: bold; line-height: 22px;
+	padding-bottom: 20px; padding-left: 20px; padding-right: 20px; overflow: hidden; word-wrap: break-word;
+}
+
+#qcld_cross_sell-product-url-front {
+	text-align: center; padding-bottom: 10px;
+}
+
+#qcld_cross_sell-product-url-front img {
+	width: 180px; border: none; display: inline-block;
+}
+
+#qcld_cross_sell-product-text-front {
+	text-align: center; font-size: 14px; font-weight: bold; line-height: 18px;
+	padding-bottom: 20px; padding-left: 20px; padding-right: 20px;
+}
+
+#qcld_cross_sell-price-text-front {
+	font-size: 12px; font-weight: bold;
+}
+
+#qcld_cross_sell-price-text-front del {
+	display: none !important;
+}
+
+#qcld_cross_sell-button-text-front {
+	text-align: center; padding-bottom: 20px;
+}
+
+#qcld_cross_sell-button-text-front-bg {
+	display: inline-block; height: 50px; width: 180px;
+}
+
+#qcld_cross_sell-button-text-front-a {
+	font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size: 14px;
+	text-decoration: none; height: 50px; width: 180px; line-height: 50px;
+}
+
+#qcld_cross_sell-logo {
+	text-align: center; padding-bottom: 20px; padding-top: 20px;
+}
+
+#qcld_cross_sell-logo a {
+	text-decoration: none; font-weight: bold; font-size: 22px;
+}
+
+#qcld_cross_sell-logo img {
+	height: auto; border: none; display: inline-block;
+}
+
+/*////////// #qcld_cross_sell_preview ENDS //////////*/
+
+/*//////////////////////////////////////////////////////////
+////////// 3. Responsive / #qcld_cross_sell_responsive STARTS //////////
+//////////////////////////////////////////////////////////*/
+
+@media all and (min-width: 450px) {
+
+	#qcld_cross_sell-buy-for-me {
+		padding: 0px 20px 20px 20px;
+	}
+
+}
+
+@media all and (min-width: 769px) {
+
+	.qcld_cross_sell-preview {
+		max-width: 340px; margin-right: 20px;
+	}
+
+}
+
+@media all and (min-width: 968px) {
+
+	#qcld_cross_sell-buy-for-me {
+		padding: 20px 20px 20px 20px;
+	}
+
+}
+
+@media all and (min-height: 670px) and (min-width: 968px) {
+
+	#qcld_cross_sell-buy-for-me {
+		position: fixed;
+	}
+
+	.qcld_cross_sell-qcld_cross_sell-wrapper {
+		vertical-align: middle;
+	}
+
+}
+
+@media all and (min-width: 1000px) {
+
+	#qcld_cross_sell-buy-for-me:before {
+		vertical-align: middle; height: 100%;
+	}
+
+}
+
+/*////////// #qcld_cross_sell_responsive ENDS //////////*/
